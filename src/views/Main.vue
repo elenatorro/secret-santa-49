@@ -1,0 +1,64 @@
+<template>
+  <div class="MainView ss-page ss-u-background-stripes-pattern">
+    <div class="MainView__Title">
+      <h1><span>Secret</span><span>Santa</span><span>49</span></h1>
+    </div>
+
+    <section class="MainView__Buttons">
+      <button class="ss_Button">START</button>
+      <button class="ss_Button">INSTRUCTIONS</button>
+    </section>
+
+    <p>by Elena Torró</p>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue, Prop } from 'vue-property-decorator'
+
+@Component({})
+export default class MainView extends Vue {}
+</script>
+<style scoped lang="scss">
+.MainView {
+  align-content: center;
+  align-items: center;
+  background-color: var(--ss--secondary-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.MainView__Title {
+  h1 {
+    color: var(--ss--white-color);
+    font-size: 64px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+p {
+  color: var(--ss--white-color);
+  opacity: 0.8;
+  margin: 8px 0;
+}
+
+.MainView__Buttons {
+  align-items: self-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 32vh;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 28px 0;
+
+  button {
+    color: var(--ss--white-color);
+    border: 8px solid var(--ss--secondary-color);
+    background-color: var(--ss--primary-color-dark);
+    font-size: 18px;
+  }
+}
+</style>

@@ -1,0 +1,20 @@
+@import 'settings/normalize';
+@import 'settings/core';
+@import 'settings/colors';
+
+@import 'generic/fonts';
+
+@import 'elements/page';
+
+@import 'components/buttons';
+
+@import 'utilities/patterns';
+
+
+html,
+body {
+  height: 100%;
+  background-color: var(--ss--white-color);
+  color: var(--ss--dark-color);
+  font-family: 'Open Sans'
+}
