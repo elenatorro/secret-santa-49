@@ -22,3 +22,18 @@ export interface SecretSantaPair {
   giver: EFriend,
   receiver: EFriend
 }
+
+export enum EGender {
+  M = 'Male',
+  F = 'Female'
+}
+
+export const gender = {
+  Alice: EGender.F,
+  Bob: EGender.M,
+  Charlie: EGender.M,
+  Daniel: EGender.M,
+  Eve: EGender.F,
+  Fabiana: EGender.F,
+  Gloria: EGender.F
+}
