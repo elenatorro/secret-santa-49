@@ -1,5 +1,5 @@
-import { EFriend } from './categories/friend';
-import { EPresent } from './categories/present';
+import { EFriend } from './categories/friend'
+import { EPresent } from './categories/present'
 
 export interface State {
   board: [],

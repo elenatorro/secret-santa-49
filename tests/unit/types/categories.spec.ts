@@ -9,7 +9,7 @@ describe('Category Types', () => {
     expect(ECategories.Present).toBeTruthy()
     expect(ECategories.Sin).toBeTruthy()
     expect(ECategories.Tattoo).toBeTruthy()
-  });
+  })
 
   it('should have all the categories', () => {
     const category = {
@@ -29,5 +29,5 @@ describe('Category Types', () => {
     expect('present' in category).toBeTruthy()
     expect('sin' in category).toBeTruthy()
     expect('tattoo' in category).toBeTruthy()
-  });
-});
+  })
+})

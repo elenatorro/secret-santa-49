@@ -8,7 +8,7 @@ export enum EFriend {
   Gloria = 'Gloria'
 }
 
-export const friends = [
+export const FRIENDS = [
   EFriend.Alice,
   EFriend.Bob,
   EFriend.Charlie,

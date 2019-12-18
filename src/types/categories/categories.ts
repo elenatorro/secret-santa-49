@@ -25,3 +25,13 @@ export enum ECategories {
   Sin = 'sin',
   Tattoo = 'tattoo'
 }
+
+export const CATEGORIES = [
+  'color',
+  'day',
+  'friend',
+  'note',
+  'present',
+  'sin',
+  'tattoo'
+] as Array<ECategories>
