@@ -1,17 +1,16 @@
-import { IBoard } from '@/types/game/board'
+import { IBoard, IBoardRow } from '@/types/game/board'
 import { shuffleRow, secretSantaFriendPairs } from './board.service'
 import { colors } from '@/types/categories/color'
 import { days } from '@/types/categories/day'
-import { friends } from '@/types/categories/friend'
+import { FRIENDS } from '@/types/categories/friend'
 import { notes } from '@/types/categories/note'
 import { presents } from '@/types/categories/present'
 import { sins } from '@/types/categories/sin'
 import { tattoos } from '@/types/categories/tattoo'
-import { ICategories } from '@/types/categories/categories'
 
 export function initBoard () {
   const board = new Map() as IBoard
-  const pairs = secretSantaFriendPairs(friends)
+  const pairs = secretSantaFriendPairs(FRIENDS)
   const colorsRow = shuffleRow(colors)
   const daysRow = shuffleRow(days)
   const notesRow = shuffleRow(notes)
@@ -30,7 +29,7 @@ export function initBoard () {
       present: presentsRow[index],
       sin: sinsRow[index],
       tattoo: tattoosRow[index]
-    } as ICategories
+    } as IBoardRow
 
     board.set(receiver, row)
   })
