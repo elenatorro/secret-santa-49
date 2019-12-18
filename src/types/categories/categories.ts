@@ -26,7 +26,7 @@ export enum ECategories {
   Tattoo = 'tattoo'
 }
 
-export const CATEGORIES = [
+export const categories = [
   'color',
   'day',
   'friend',

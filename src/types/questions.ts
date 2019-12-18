@@ -1,5 +1,5 @@
 import { TranslateResult } from 'vue-i18n'
-import { CATEGORIES } from './categories/categories'
+import { categories } from './categories/categories'
 
 export enum EQuestion {
   Positive = 'positive',
@@ -11,4 +11,4 @@ export interface IQuestionPlaceholder {
 }
 
 export const QUESTION_TYPES = ['positive', 'negative'] as Array<EQuestion>
-export const MAX_QUESTIONS = CATEGORIES.length * (CATEGORIES.length - 1)
+export const MAX_QUESTIONS = categories.length * (categories.length - 1)

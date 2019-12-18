@@ -1,6 +1,6 @@
-import { CATEGORIES, ECategories } from '@/types/categories/categories'
+import { categories, ECategories } from '@/types/categories/categories'
 import { QUESTION_TYPES, EQuestion, IQuestionPlaceholder } from '@/types/questions'
-import { EFriend, FRIENDS } from '@/types/categories/friend'
+import { EFriend, friends } from '@/types/categories/friend'
 
 import i18n from '@/i18n'
 import { IBoard } from '@/types/game/board'
@@ -25,23 +25,23 @@ const buildQuestionsByType = {
 }
 
 function getFriend () {
-  return getRandomFriend(FRIENDS)
+  return getRandomFriend(friends)
 }
 
 function getCategoryA () {
-  return getRandomCategory(CATEGORIES)
+  return getRandomCategory(categories)
 }
 
 function getCategoryB (questionCategoryA: ECategories) {
   if (questionCategoryA === ECategories.Friend) {
-    return getRandomCategory(CATEGORIES.filter(c => c !== questionCategoryA && c !== ECategories.Present))
+    return getRandomCategory(categories.filter(c => c !== questionCategoryA && c !== ECategories.Present))
   }
 
   if (questionCategoryA === ECategories.Present) {
-    return getRandomCategory(CATEGORIES.filter(c => c !== questionCategoryA && c !== ECategories.Friend))
+    return getRandomCategory(categories.filter(c => c !== questionCategoryA && c !== ECategories.Friend))
   }
 
-  return getRandomCategory(CATEGORIES.filter(c => c !== questionCategoryA))
+  return getRandomCategory(categories.filter(c => c !== questionCategoryA))
 }
 
 function buildPositiveQuestion (friend: EFriend, board: IBoard, categoryA: ECategories, categoryB: ECategories) {
@@ -59,7 +59,7 @@ function buildPositiveQuestion (friend: EFriend, board: IBoard, categoryA: ECate
 }
 
 function buildNegativeQuestion (friend: EFriend, board: IBoard, categoryA: ECategories, categoryB: ECategories) {
-  const friend2 = getRandomFriend(FRIENDS.filter(f => f !== friend))
+  const friend2 = getRandomFriend(friends.filter(f => f !== friend))
   const board1Row = board.get(friend)
   const board2Row = board.get(friend2)
   const valueA = board1Row ? board1Row[categoryA] : null
