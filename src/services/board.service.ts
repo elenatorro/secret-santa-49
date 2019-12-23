@@ -26,7 +26,7 @@ export function secretSantaFriendPairs (friends: Array<EFriend>) {
     receiver: friendsRow[0]
   })
 
-  for (let i = 0; i < friendsRow.length; i++) {
+  for (let i = 1; i < friendsRow.length; i++) {
     pairs.push({
       giver: friendsRow[i - 1],
       receiver: friendsRow[i]

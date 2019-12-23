@@ -1,8 +1,11 @@
 import { EFriend } from '../categories/friend'
-import { ICategories } from '../categories/categories'
 
 export interface IBoardRow {
   [key: string]: string
+}
+
+export interface IGameBoardRow {
+  [key: string]: IBoardRow
 }
 
 export type IBoard = Map<EFriend, IBoardRow>

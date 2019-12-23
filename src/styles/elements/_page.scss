@@ -1,5 +1,18 @@
 .ss-page {
   height: 100%;
   width: 100%;
-  margin: 0;
+  box-sizing: border-box;
+}
+
+.ss-page__header {
+  padding: 2em;
+  text-align: center;
+}
+
+.ss-page__footer {
+  padding: 2em;
+}
+
+.ss-page__full {
+  height: 100%;
 }

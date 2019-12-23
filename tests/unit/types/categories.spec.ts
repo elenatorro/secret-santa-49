@@ -19,7 +19,7 @@ describe('Category Types', () => {
       note: 'C',
       present: 'smart-watch',
       sin: 'lust',
-      tattoo: 7
+      tattoo: 'seven'
     } as ICategories
 
     expect('color' in category).toBeTruthy()

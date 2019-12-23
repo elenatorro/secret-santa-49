@@ -1,5 +1,53 @@
 {
   "welcome": "Welcome",
+  "components": {
+    "game-over": {
+      "error-header": "Oh, no!",
+      "error-message": "Sorry, {friend}, but your Secret Santa is {secretSanta}",
+      "congrats-header": "Congrats, {friend}!",
+      "congrats-message": "Your Secret Santa is {secretSanta}"
+    },
+    "start-button": {
+      "start": "Start"
+    },
+    "back-button": {
+      "back": "Back"
+    },
+    "instructions-button": {
+      "instructions": "Instructions"
+    },
+    "restart-button": {
+      "restart": "Restart"
+    },
+    "friend-selector": {
+      "hello": "Hi, {selectedFriend}.",
+      "present": "You just got",
+      "subtitle": "Now, you've to find out who's your Secret Santa!",
+      "question": "Who are you?"
+    },
+    "question-button": {
+      "hint": "Hint",
+      "resolve": "Solve"
+    }
+  },
+  "views": {
+    "solve": {
+      "question": "Who's your Secret Santa?"
+    },
+    "instructions": {
+      "title": "Instructions",
+      "subtitle": "Find out who's your Secret Santa!",
+      "sentence1": "Seven friends meet at Christmas to play Secret Santa. It's a very peculiar group of seven friends: Alice, Bob, Charlie, Daniel, Eve, Fabiana and Gloria.",
+      "sentence2": "Each one has a tattoo with a different number of lines, from one to seven.",
+      "sentence3": "Each one has a whistle that sounds with a scale note: C, D, E, F, G, A and B.",
+      "sentence4": "In addition, each one usually commits one of the deadly sins each time they celebrate their Christmas dinner: lust, gluttony, greed, sloth, wrath, envy, and pride.",
+      "sentence5": "Each bought a different gift: a board game, a SmartWatch, a pair of Socks, a videogame, a pair of VR Glasses, and a perfume.",
+      "sentence6": "None of them bought it the same day of the week.",
+      "sentence7": "And they've decided to wrap it with different colored wrapping paper: red, orange, yellow, green, blue, indigo, and violet",
+      "sentence8": "Obviously, no one bought a present for himself.",
+      "sentence9": "Choose one of the characters and deduce who your Secret Santa is through the hints!"
+    }
+  },
   "questions": {
     "replacements": {
       "pronoun": {
@@ -20,9 +68,10 @@
         "lust": "has tried to sleep with all of the friends in the group",
         "gluttony": "usually has another serving and eats someone's dessert",
         "greed": "wants the most expensive gift",
-        "sloth": "is so lazy and usually gets late because of that",
+        "sloth": "is so lazy and usually gets late",
         "wrath": "broke once someone's gift filled with fury after receiving bad news",
-        "envy": "is always jelous of other's gifts"
+        "envy": "is always jealous of other's gifts",
+        "pride": "has an inflated sense of self-importance and will never recognize a mistake"
       },
       "color": {
         "red": "red",
@@ -43,13 +92,13 @@
         "sunday": "Sunday"
       },
       "friend": {
-        "alice": "Alice",
-        "bob": "Bob",
-        "charlie": "Charlie",
-        "daniel": "Daniel",
-        "eve": "Eve",
-        "fabiana": "Fabiana",
-        "gloria": "Gloria"
+        "Alice": "Alice",
+        "Bob": "Bob",
+        "Charlie": "Charlie",
+        "Daniel": "Daniel",
+        "Eve": "Eve",
+        "Fabiana": "Fabiana",
+        "Gloria": "Gloria"
       },
       "tattoo": {
         "one": "one line",
@@ -76,7 +125,7 @@
         "videogame": "a videogame",
         "book": "a book",
         "vr-glasses": "a pair of VR glasses",
-        "perfum": "a perfume"
+        "perfume": "a perfume"
       }
     },
     "templates": {
@@ -93,7 +142,7 @@
           "color-day": "The {color} gift wasn't bought on {day}",
           "color-note": "The {color} gift wasn't bought by the one whose whistle sounds like {note}",
           "color-tattoo": "The {color} gift wasn't bought by the one with the {tattoo} tattoo",
-          "color-present": "The {color} gift doesn't contain the {present}",
+          "color-present": "The {color} gift doesn't contain {present}",
           "color-sin": "The {color} gift wasn't bought by the one who {sin}",
           "color-friend": "{friend} didn't buy the gift wrapped in {color}"
         }
@@ -114,14 +163,6 @@
           "day-present": "The one who bought {present} didn't buy it on {day}",
           "day-note": "The one whose whistle sounds like {note} didn't buy the gift on {day}",
           "day-tattoo": "The one with a {tattoo} tattoo didn't buy the gift on {day}"
-        },
-        "before": {
-          "friend1-friend2": "{friend1} bought the gift before {friend2}",
-          "color1-color2": "The {color1} gift was bought before {color2}"
-        },
-        "after": {
-          "friend1-friend2": "{friend1} bought the gift after {friend2}",
-          "color1-color2": "The {color1} gift was bought after {color2}"
         }
       },
       "friend": {
@@ -158,12 +199,6 @@
           "tattoo-note": "The one with a {tattoo} tattoo doesn't have a whistle that sounds like {note}",
           "tattoo-present": "The one with a {tattoo} tattoo didn't buy {present}",
           "tattoo-friend": "{friend} doesn't have a {tattoo} tattoo"
-        },
-        "great-than": {
-          "tattoo-friend": "{friend}'s tattoo has more than {tattoo}"
-        },
-        "less-than": {
-          "tattoo-friend": "{friend}'s tattoo has less than {tattoo}"
         }
       },
       "present": {
@@ -171,12 +206,12 @@
           "present-color": "The {color} gift contains the {present}",
           "present-tattoo": "The one with a {tattoo} tattoo bought {present}",
           "present-day": "The one who bought {present} did it on {day}", 
-          "present-sin": "The one who bought the {present} {sin}",
+          "present-sin": "The one who bought {present} {sin}",
           "present-note": "The one whose whistle sounds like {note} bought {present}",
           "present-friend": "{friend} bought {present}"
         },
         "negative": {
-          "present-color": "The {color} gift doesn't contain the {present}",
+          "present-color": "The {color} gift doesn't contain {present}",
           "present-tattoo": "The one with a {tattoo} tattoo didn't buy {present}",
           "present-day": "The one who bought {present} didn't buy it on {day}",
           "present-sin": "The one who {sin} didn't buy {present}",
@@ -189,7 +224,7 @@
           "sin-color": "The one who bought the {color} gift {sin}",
           "sin-day": "The one who bought the gift on {day} {sin}",
           "sin-tattoo": "The one who has a {tattoo} tattoo {sin}",
-          "sin-present": "The one who bought the {present} {sin}",
+          "sin-present": "The one who bought {present} {sin}",
           "sin-friend": "{friend} {sin}",
           "sin-note": "The one whose whistle sounds like {note} {sin}"
         },

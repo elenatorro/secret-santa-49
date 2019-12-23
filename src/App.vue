@@ -1,5 +1,6 @@
 <template>
-  <div class="App" :class="{ 'App--loading': loading }">
+  <div class="App"
+    :class="{ 'App--loading': loading }">
     <router-view/>
   </div>
 </template>
@@ -22,6 +23,7 @@ export default class App extends Vue {
 
 .App {
   height: 100%;
+  overflow-y: scroll;
 }
 
 .App--loading::after {

@@ -1,11 +1,11 @@
 export enum ETattoo {
-  'One' = 1,
-  'Two' = 2,
-  'Three' = 3,
-  'Four' = 4,
-  'Five' = 5,
-  'Six' = 6,
-  'Seven' = 7
+  'One' = 'one',
+  'Two' = 'two',
+  'Three' = 'three',
+  'Four' = 'four',
+  'Five' = 'five',
+  'Six' = 'six',
+  'Seven' = 'seven'
 }
 
 export const tattoos = [

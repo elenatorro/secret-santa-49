@@ -17,3 +17,7 @@ export const notes = [
   ENote.A,
   ENote.B
 ]
+
+export interface INoteSounds {
+  [key: string]: Object
+}

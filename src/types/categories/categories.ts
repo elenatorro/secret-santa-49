@@ -26,12 +26,6 @@ export enum ECategories {
   Tattoo = 'tattoo'
 }
 
-export const categories = [
-  'color',
-  'day',
-  'friend',
-  'note',
-  'present',
-  'sin',
-  'tattoo'
-] as Array<ECategories>
+export interface ICategoryMedia {
+  [key: string]: String
+}

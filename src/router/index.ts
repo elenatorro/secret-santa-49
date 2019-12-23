@@ -23,6 +23,18 @@ const routes = [
     path: `/${pages.WELCOME_PATH}`,
     name: pages.WELCOME_PATH,
     component: _lazyLoad(pages.WELCOME_VIEW)
+  }, {
+    path: `/${pages.QUESTIONS_PATH}`,
+    name: pages.QUESTIONS_PATH,
+    component: _lazyLoad(pages.QUESTIONS_VIEW)
+  }, {
+    path: `/${pages.SOLVE_PATH}`,
+    name: pages.SOLVE_PATH,
+    component: _lazyLoad(pages.SOLVE_VIEW)
+  }, {
+    path: `/${pages.GAME_OVER_PATH}`,
+    name: pages.GAME_OVER_PATH,
+    component: _lazyLoad(pages.GAME_OVER_VIEW)
   }
 ]
 

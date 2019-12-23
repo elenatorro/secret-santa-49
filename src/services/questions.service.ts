@@ -1,9 +1,10 @@
-import { categories, ECategories } from '@/types/categories/categories'
+import { ECategories } from '@/types/categories/categories'
 import { QUESTION_TYPES, EQuestion, IQuestionPlaceholder } from '@/types/questions'
 import { EFriend, friends } from '@/types/categories/friend'
 
 import i18n from '@/i18n'
 import { IBoard } from '@/types/game/board'
+import { categories } from '@/constants/categories'
 
 export function buildQuestion (board: IBoard) {
   const friend = getFriend()
@@ -55,7 +56,15 @@ function buildPositiveQuestion (friend: EFriend, board: IBoard, categoryA: ECate
   placeholders[categoryA] = questionPlaceholderA
   placeholders[categoryB] = questionPlaceholderB
 
-  return i18n.t(`template.${categoryA}.${EQuestion.Positive}.${categoryA}-${categoryB}`, placeholders)
+  const text = i18n.t(`questions.templates.${categoryA}.${EQuestion.Positive}.${categoryA}-${categoryB}`, placeholders)
+
+  return {
+    valueA,
+    valueB,
+    categoryA,
+    categoryB,
+    text
+  }
 }
 
 function buildNegativeQuestion (friend: EFriend, board: IBoard, categoryA: ECategories, categoryB: ECategories) {
@@ -72,7 +81,15 @@ function buildNegativeQuestion (friend: EFriend, board: IBoard, categoryA: ECate
   placeholders[categoryA] = questionPlaceholderA
   placeholders[categoryB] = questionPlaceholderB
 
-  return i18n.t(`template.${categoryA}.${EQuestion.Negative}.${categoryA}-${categoryB}`, placeholders)
+  const text = i18n.t(`questions.templates.${categoryA}.${EQuestion.Negative}.${categoryA}-${categoryB}`, placeholders)
+
+  return {
+    valueA,
+    valueB,
+    categoryA,
+    categoryB,
+    text
+  }
 }
 
 function getRandomFriend (friends: Array<EFriend>) {
