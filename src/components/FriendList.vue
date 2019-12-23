@@ -40,7 +40,7 @@ export default class FriendList extends Vue {
   box-sizing: border-box;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 4em 0;
+  margin: 2em 0;
 
   button {
     margin: 0.5em;

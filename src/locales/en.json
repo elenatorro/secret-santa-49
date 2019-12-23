@@ -1,6 +1,22 @@
 {
   "welcome": "Welcome",
   "components": {
+    "category-legend": {
+      "friends": "Friends",
+      "friends-list": "Alice, Bob, Charlie, Daniel, Eve, Fabiana and Gloria",
+      "presents": "Gifts",
+      "presents-list": "a board game, a SmartWatch, a pair of socks, a videogame, a pair of VR Glasses, perfume, and a book",
+      "colors": "Wrapping paper colors",
+      "colors-list": "red, orange, yellow, green, blue, indigo, and violet",
+      "notes": "Music notes",
+      "notes-list": "C, D, E, F, G, A and B",
+      "sins": "Sins",
+      "sins-list": "Lust, gluttony, greed, sloth, wrath, envy, and pride",
+      "days": "Days of the week",
+      "days-list": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+      "tattoos": "Tattoos",
+      "tattoos-list": "One, two, three, four, five, six, and seven lines"
+    },
     "game-over": {
       "error-header": "Oh, no!",
       "error-message": "Sorry, {friend}, but your Secret Santa is {secretSanta}",
@@ -41,9 +57,9 @@
       "sentence2": "Each one has a tattoo with a different number of lines, from one to seven.",
       "sentence3": "Each one has a whistle that sounds with a scale note: C, D, E, F, G, A and B.",
       "sentence4": "In addition, each one usually commits one of the deadly sins each time they celebrate their Christmas dinner: lust, gluttony, greed, sloth, wrath, envy, and pride.",
-      "sentence5": "Each bought a different gift: a board game, a SmartWatch, a pair of Socks, a videogame, a pair of VR Glasses, and a perfume.",
+      "sentence5": "Each bought a different gift: a board game, a SmartWatch, a pair of socks, a videogame, a pair of VR Glasses, perfume, and a book",
       "sentence6": "None of them bought it the same day of the week.",
-      "sentence7": "And they've decided to wrap it with different colored wrapping paper: red, orange, yellow, green, blue, indigo, and violet",
+      "sentence7": "And they've decided to wrap it with different colored wrapping paper: red, orange, yellow, green, blue, indigo, and violet.",
       "sentence8": "Obviously, no one bought a present for himself.",
       "sentence9": "Choose one of the characters and deduce who your Secret Santa is through the hints!"
     }

@@ -72,6 +72,12 @@ export default class FriendSelector extends Vue {
   max-height: 48px;
 }
 
+.FriendSelector__Buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .FriendSelector__ButtonList {
   display: flex;
   box-sizing: border-box;

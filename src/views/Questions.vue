@@ -1,5 +1,7 @@
 <template>
   <div class="QuestionsView ss-page">
+    <CategoryLegend v-if="selectedFriend" />
+
     <header class="ss-page__header" :class="!selectedFriend ? 'ss-page__full' : ''">
       <FriendSelector />
     </header>
@@ -20,12 +22,14 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 import FriendSelector from '@/components/FriendSelector.vue'
 import QuestionList from '@/components/QuestionList.vue'
 import QuestionButton from '@/components/QuestionButton.vue'
+import CategoryLegend from '@/components/CategoryLegend.vue'
 
 @Component({
   components: {
     FriendSelector,
     QuestionList,
-    QuestionButton
+    QuestionButton,
+    CategoryLegend
   }
 })
 export default class QuestionsView extends Vue {

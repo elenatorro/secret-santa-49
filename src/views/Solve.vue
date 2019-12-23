@@ -10,6 +10,8 @@
     <FriendList
       @friendClicked="onFriendClicked"
       :friends="friendList"/>
+
+    <BackButton class="ss_Button ss_PrimaryButton" />
   </div>
 </template>
 
@@ -17,13 +19,15 @@
 import { Component, Vue, Watch } from 'vue-property-decorator'
 import FriendList from '@/components/FriendList.vue'
 import CategoryMedia from '@/components/media/CategoryMedia.vue'
+import BackButton from '@/components/BackButton.vue'
 import pages from '@/constants/pages'
 import { EFriend, friends } from '@/types/categories/friend'
 
 @Component({
   components: {
     FriendList,
-    CategoryMedia
+    CategoryMedia,
+    BackButton
   }
 })
 export default class SolveView extends Vue {
@@ -44,5 +48,9 @@ export default class SolveView extends Vue {
 }
 </script>
 <style scoped lang="scss">
-.SolveView {}
+.SolveView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 </style>
