@@ -3,7 +3,8 @@
     <button
       class="CategoryLegend__Button ss_Button"
       @click="toggleLegend()" aria-label="toggle legend">
-      ?
+      <span v-if="!showLegend">{{ $t('components.category-legend.info') }}</span>
+      <span v-if="showLegend">{{ $t('components.category-legend.close') }}</span>
     </button>
 
     <div class="CategoryLegendModal" v-show="showLegend">

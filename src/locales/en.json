@@ -2,6 +2,8 @@
   "welcome": "Welcome",
   "components": {
     "category-legend": {
+      "info": "info",
+      "close": "close",
       "friends": "Friends",
       "friends-list": "Alice, Bob, Charlie, Daniel, Eve, Fabiana and Gloria",
       "presents": "Gifts",
