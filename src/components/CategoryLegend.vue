@@ -57,6 +57,7 @@ export default class CategoryLegend extends Vue {
 
 .CategoryLegend__Button {
   position: absolute;
+  background-color: white;
   width: 48px;
   height: 48px;
   padding: 0 2em;
