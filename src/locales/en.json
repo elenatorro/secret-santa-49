@@ -152,7 +152,7 @@
           "color-day": "The {color} gift was bought on {day}",
           "color-note": "The {color} gift was bought by the one whose whistle sounds like {note}",
           "color-tattoo": "The {color} gift was bought by the one with the {tattoo} tattoo",
-          "color-present": "The {color} gift contains the {present",
+          "color-present": "The {color} gift contains the {present}",
           "color-sin": "The {color} gift was bought by the one who {sin}",
           "color-friend": "{friend} bought the gift wrapped in {color}"
         },
@@ -177,7 +177,7 @@
         "negative": {
           "day-friend": "{friend} didn't buy the gift on {day}",
           "day-color": "The {color} gift wasn't bought on {day}",
-          "day-sin": "The one who {sin} didn't by the gift on {day}",
+          "day-sin": "The one who {sin} didn't buy the gift on {day}",
           "day-present": "The one who bought {present} didn't buy it on {day}",
           "day-note": "The one whose whistle sounds like {note} didn't buy the gift on {day}",
           "day-tattoo": "The one with a {tattoo} tattoo didn't buy the gift on {day}"
@@ -248,7 +248,7 @@
         },
         "negative": {
           "sin-color": "The {color} gift wasn't bought by the one who {sin}",
-          "sin-day": "The one who {sin} didn't by the gift on {day}",
+          "sin-day": "The one who {sin} didn't buy the gift on {day}",
           "sin-tattoo": "The one who {sin} doesn't have a {tattoo} tattoo",
           "sin-present": "The one who {sin} didn't buy {present}",
           "sin-friend": "{friend} is not the one that {sin}",
