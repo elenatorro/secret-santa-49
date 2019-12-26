@@ -3,7 +3,7 @@
   <table>
     <thead>
       <th v-for="(header, index) in headers" :key="index">
-        <tr>{{ header }}</tr>
+        <tr>{{ $t(`components.game-board.${header}`) }}</tr>
       </th>
     </thead>
     <tbody>
@@ -11,7 +11,7 @@
         :key="friend">
         <td>{{ friend }}</td>
         <td v-for="category in categories" :key="category">
-          {{ friendCategory(friend, category) }}
+          {{ $t(`questions.placeholders.${category}.${friendCategory(friend, category)}`) }}
         </td>
       </tr>
     </tbody>
@@ -46,9 +46,10 @@ export default class GameBoard extends Vue {
 .GameBoard {
   width: 100%;
   overflow-x: scroll;
-  padding: 0 3em;
+  padding: 0 2em;
   box-sizing: border-box;
-  margin: 0 2em 2em 0;
+  margin: 0;
+  margin: 0 0 2em 0;
 }
 
 table {
@@ -58,6 +59,8 @@ table {
 }
 
 th, td {
-  padding: 1em;
+  padding: 0.75em;
+  width:1%;
+  white-space:nowrap;
 }
 </style>

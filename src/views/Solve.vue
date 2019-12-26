@@ -53,4 +53,8 @@ export default class SolveView extends Vue {
   flex-direction: column;
   align-items: center;
 }
+
+.ss_Button {
+  margin: 1em 0;
+}
 </style>

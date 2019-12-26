@@ -9,6 +9,8 @@
       <InstructionsButton class="ss_Button ss_PrimaryButton" />
     </section>
 
+    <LanguageSelector />
+
     <p>by Elena Torró</p>
   </div>
 </template>
@@ -17,11 +19,13 @@
 import { Component, Vue, Prop } from 'vue-property-decorator'
 import StartButton from '@/components/StartButton.vue'
 import InstructionsButton from '@/components/InstructionsButton.vue'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 
 @Component({
   components: {
     StartButton,
-    InstructionsButton
+    InstructionsButton,
+    LanguageSelector
   }
 })
 export default class MainView extends Vue {}

@@ -1,11 +1,21 @@
 {
   "welcome": "Welcome",
   "components": {
+    "game-board": {
+      "receiver": "Receiver",
+      "friend": "Secret Santa",
+      "color": "Color",
+      "present": "Gift",
+      "sin": "Sin",
+      "note": "Music Note",
+      "tattoo": "Tattoo",
+      "day": "Day"
+    },
     "category-legend": {
       "info": "info",
       "close": "close",
       "friends": "Friends",
-      "friends-list": "Alice, Bob, Charlie, Daniel, Eve, Fabiana and Gloria",
+      "friends-list": "Alice, Bob, Charlie, Daniel, Eve, Fabiana, and Gloria",
       "presents": "Gifts",
       "presents-list": "a board game, a SmartWatch, a pair of socks, a videogame, a pair of VR Glasses, perfume, and a book",
       "colors": "Wrapping paper colors",

@@ -20,7 +20,8 @@ const initialState = {
   error: false,
   settings: {
     audio: false
-  }
+  },
+  locale: 'es'
 }
 
 export default new Vuex.Store({
@@ -50,6 +51,9 @@ export default new Vuex.Store({
     },
     reset: (state) => {
       Object.assign(state, initialState)
+    },
+    changeLocale: (state, locale) => {
+      state.locale = locale
     }
   },
   actions: {
@@ -85,6 +89,9 @@ export default new Vuex.Store({
       } else {
         commit('wrongAnser')
       }
+    },
+    changeLocale: ({ commit }, locale: String) => {
+      commit('changeLocale', locale)
     }
   },
   getters: {
@@ -117,6 +124,9 @@ export default new Vuex.Store({
     },
     settings: (state) => {
       return state.settings
+    },
+    locale: (state) => {
+      return state.locale
     }
   }
 })

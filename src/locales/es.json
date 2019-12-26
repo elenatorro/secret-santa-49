@@ -1,0 +1,274 @@
+{
+  "welcome": "Bienvenido",
+  "components": {
+    "game-board": {
+      "receiver": "Destinatario",
+      "friend": "Amigo Invisible",
+      "color": "Color",
+      "present": "Regalo",
+      "sin": "Pecado",
+      "note": "Nota Musical",
+      "tattoo": "Tatuaje",
+      "day": "Día"
+    },
+    "category-legend": {
+      "info": "info",
+      "close": "cerrar",
+      "friends": "Amigos",
+      "friends-list": "Alice, Bob, Charlie, Daniel, Eve, Fabiana y Gloria",
+      "presents": "Regalos",
+      "presents-list": "un juego de mesa, un SmartWatch, unos calcetines, un videojuego, unas gafas de realidad virtual, un perfume y un libro",
+      "colors": "Papel de colores",
+      "colors-list": "rojo, naranja, amarillo, verde, azul, indigo y violeta",
+      "notes": "Notas musicales",
+      "notes-list": "Do, Re, Mi, Fa, Sol, La y Si",
+      "sins": "Pecados",
+      "sins-list": "Lujuria, gula, codicia, pereza, ira, envidia y soberbia",
+      "days": "Días de la semana",
+      "days-list": "Lunes, Martes, Miércoles, Jueves, Viernes, Sábado y Domingo",
+      "tattoos": "Tatuajes",
+      "tattoos-list": "Una, dos, tres, cuatro, cinco, seis y siete líneas"
+    },
+    "game-over": {
+      "error-header": "¡Oh, no!",
+      "error-message": "Lo siento, {friend}, pero tu Amigo Invisible es {secretSanta}",
+      "congrats-header": "¡Enhorabuena, {friend}!",
+      "congrats-message": "Tu amigo invisible es {secretSanta}"
+    },
+    "start-button": {
+      "start": "Empezar"
+    },
+    "back-button": {
+      "back": "Atrás"
+    },
+    "instructions-button": {
+      "instructions": "Instrucciones"
+    },
+    "restart-button": {
+      "restart": "Empezar"
+    },
+    "friend-selector": {
+      "hello": "Hola, {selectedFriend}.",
+      "present": "Te han regalado",
+      "subtitle": "Ahora, ¡tienes que averiguar quién es tu Amigo Invisible!",
+      "question": "¿Quién eres?"
+    },
+    "question-button": {
+      "hint": "Pista",
+      "resolve": "Resolver"
+    }
+  },
+  "views": {
+    "solve": {
+      "question": "¿Quién es tu amigo invisible?"
+    },
+    "instructions": {
+      "title": "Instrucciones",
+      "subtitle": "¡Descubre a tu amigo invisible!",
+      "sentence1": "Siete amigos se reunen para cenar en Navidad y juegan al amigo invisible. Es un grupo de amigos muy peculiar, ellos son: Alice, Bob, Charlie, Daniel, Eve, Fabiana y Gloria.",
+      "sentence2": "Cada uno de ellos tiene un tatuaje con un número diferente de líneas, de uno a siete.",
+      "sentence3": "Cada uno tiene un silbato que suena con una nota distinta: Do, Re, Mi, Fa, Sol, La o Si",
+      "sentence4": "Además, cada uno suele cometer un pecado capital cada vez que cenan en navidad: lujuria, gula, codicia, pereza, ira, envidia y soberbia.",
+      "sentence5": "Los regalos que han comprado son un juego de mesa, un SmartWatch, unos calcetines, un videojuego, unas gafas de realidad virtual, un perfume y un libro.",
+      "sentence6": "Ninguno de ellos ha comprado su regalo el mismo día de la semana.",
+      "sentence7": "Y han decidido envolver su regalo con un papel de color diferente: rojo, naranja, amarillo, verde, azul y violeta.",
+      "sentence8": "Obviamente, nadie se ha regalado a sí mismo.",
+      "sentence9": "¡Elige a uno de los siete amigos y averigua quién es tu amigo invisible a través de las pistas!"
+    }
+  },
+  "questions": {
+    "placeholders": {
+      "sin": {
+        "lust": "ha intentado enrollarse con todos los amigos del grupo",
+        "gluttony": "suele repetir plato y siempre se come el postre de otro",
+        "greed": "siempre quiere el regalo más caro",
+        "sloth": "le da pereza ir a la cena y siempre llega tarde",
+        "wrath": "una vez rompió con furia su regalo al recibir una mala noticia",
+        "envy": "siempre desea el regalo de otra persona",
+        "pride": "se cree muy importante y nunca reconocería un error"
+      },
+      "color": {
+        "red": "rojo",
+        "orange": "naranja",
+        "yellow": "amarillo",
+        "green": "verde",
+        "blue": "azul",
+        "indigo": "indigo",
+        "violet": "violeta"
+      },
+      "day": {
+        "monday": "lunes",
+        "tuesday": "martes",
+        "wednesday": "miércoles",
+        "thursday": "jueves",
+        "friday": "viernes",
+        "saturday": "sábado",
+        "sunday": "domingo"
+      },
+      "friend": {
+        "Alice": "Alice",
+        "Bob": "Bob",
+        "Charlie": "Charlie",
+        "Daniel": "Daniel",
+        "Eve": "Eve",
+        "Fabiana": "Fabiana",
+        "Gloria": "Gloria"
+      },
+      "tattoo": {
+        "one": "una linea",
+        "two": "dos líneas",
+        "three": "tres líneas",
+        "four": "cuatro líneas",
+        "five": "cinco líneas",
+        "six": "seis líneas",
+        "seven": "siete líneas"
+      },
+      "note": {
+        "C": "Do",
+        "D": "Re",
+        "E": "Mi",
+        "F": "Fa",
+        "G": "Sol",
+        "A": "La",
+        "B": "Si"
+      },
+      "present": {
+        "board-game": "un juego de mesa",
+        "smart-watch": "un SmartWatch",
+        "socks": "unos calcetines",
+        "videogame": "un videojuego",
+        "book": "un libro",
+        "vr-glasses": "unas gafas de Realidad Virtual",
+        "perfume": "un perfume"
+      }
+    },
+    "templates": {
+      "color": {
+        "positive": {
+          "color-day": "El regalo envuelto en {color} fue comprado un {day}",
+          "color-note": "El regalo envuelto en {color} fue comprado por el que tiene un silbato que suena en {note}",
+          "color-tattoo": "El regalo envuelto en {color} fue comprado por el que tiene un tatuaje de {tattoo}",
+          "color-present": "El regalo envuelto en {color} contiene {present}",
+          "color-sin": "El regalo envuelto en {color} fue comprado por el que {sin}",
+          "color-friend": "{friend} ha comprado el regalo envuelto en {color}"
+        },
+        "negative": {
+          "color-day": "El regalo envuelto en {color} no fue comprado el {day}",
+          "color-note": "El regalo envuelto en {color} no fue comprado por el que tiene un silbato que suena en {note}",
+          "color-tattoo": "El regalo envuelto en {color} no fue comprado por el que tiene un tatuaje de {tattoo}",
+          "color-present": "El regalo envuelto en {color} no contiene {present}",
+          "color-sin": "El regalo envuelto en {color} no fue comprado por el que {sin}",
+          "color-friend": "{friend} no ha comprado el regalo envuelto en {color}"
+        }
+      },
+      "day": {
+        "positive": {
+          "day-friend": "{friend} compró el regalo el {day}",
+          "day-color": "El regalo envuelto en {color} fue comprado el {day}",
+          "day-sin": "La persona que {sin} compró el regalo el {day}",
+          "day-present": "La persona que ha comprado {present} lo hizo el {day}",
+          "day-note": "La persona cuyo silbato suena en {note} compró su regalo el {day}",
+          "day-tattoo": "La persona que tiene un tatuaje de {tattoo} compró su regalo el {day}"
+        },
+        "negative": {
+          "day-friend": "{friend} no compró el regalo el {day}",
+          "day-color": "El regalo envuelto en {color} no fue comprado el {day}",
+          "day-sin": "La persona que {sin} no compró el regalo el {day}",
+          "day-present": "La persona que ha comprado {present} no lo hizo el {day}",
+          "day-note": "La persona cuyo silbato suena en {note} no compró su regalo el {day}",
+          "day-tattoo": "La persona que tiene un tatuaje de {tattoo} no compró su regalo el {day}"
+        }
+      },
+      "friend": {
+        "positive": {
+          "friend-day": "{friend} compró su regalo el {day}",
+          "friend-note": "El silbato de {friend} suena en {note}",
+          "friend-sin": "{friend} es la persona que {sin}",
+          "friend-color": "{friend} ha envuelto su regalo en color {color}",
+          "friend-tattoo": "{friend} tiene un tatuaje de {tattoo}",
+          "friend-present": "{friend} ha comprado {present}"
+        },
+        "negative": {
+          "friend-day": "{friend} no compró su regalo el {day}",
+          "friend-note": "El silbato de {friend} no suena en {note}",
+          "friend-sin": "{friend} no es la persona que {sin}",
+          "friend-color": "{friend} no ha envuelto su regalo en color {color}",
+          "friend-tattoo": "{friend} no tiene un tatuaje de {tattoo}",
+          "friend-present": "{friend} no ha comprado {present}"
+        }
+      },
+      "tattoo": {
+        "positive": {
+          "tattoo-color": "La persona que tiene un tatuaje de {tattoo} envolvió su regalo en {color}",
+          "tattoo-day": "La persona que tiene un tatuaje de {tattoo} compró su regalo el {day}",
+          "tattoo-sin": "La persona que tiene un tatuaje de {tattoo}, {sin}",
+          "tattoo-note": "La persona que tiene un tatuaje de {tattoo} tiene un silbato que suena en {note}",
+          "tattoo-present": "La persona que tiene un tatuaje de {tattoo} ha comprado {present}",
+          "tattoo-friend": "{friend} tiene un tatuaje de {tattoo}"
+        },
+        "negative": {
+          "tattoo-color": "La persona que tiene un tatuaje de {tattoo} no envolvió su regalo en {color}",
+          "tattoo-day": "La persona que tiene un tatuaje de {tattoo} no compró su regalo el {day}",
+          "tattoo-sin": "La persona que tiene un tatuaje de {tattoo} no {sin}",
+          "tattoo-note": "La persona que tiene un tatuaje de {tattoo} no tiene un silbato que suena en {note}",
+          "tattoo-present": "La persona que tiene un tatuaje de {tattoo} no ha comprado {present}",
+          "tattoo-friend": "{friend} no tiene un tatuaje de {tattoo}"
+        }
+      },
+      "present": {
+        "positive": {
+          "present-color": "El paquete de color {color} contiene {present}",
+          "present-tattoo": "La persona que tiene un tatuaje de {tattoo} ha comprado {present}",
+          "present-day": "La persona que ha comprado {present} lo hizo el {day}",
+          "present-sin": "La persona que ha comprado {present}, {sin}",
+          "present-note": "La persona con un silbato que suena en {note} compró {present}",
+          "present-friend": "{friend} ha comprado {present}"
+        },
+        "negative": {
+          "present-color": "El paquete de color {color} no contiene {present}",
+          "present-tattoo": "La persona que tiene un tatuaje de {tattoo} no ha comprado {present}",
+          "present-day": "La persona que ha comprado {present} no lo hizo el {day}",
+          "present-sin": "La persona que ha comprado {present} no {sin}",
+          "present-note": "La persona con un silbato que suena en {note} no compró {present}",
+          "present-friend": "{friend} no ha comprado {present}"
+        }
+      },
+      "sin": {
+        "positive": {
+          "sin-color": "El regalo envuelto en {color} fue comprado por el que {sin}",
+          "sin-day": "La persona que {sin} compró el regalo el {day}",
+          "sin-tattoo": "La persona que tiene un tatuaje de {tattoo}, {sin}",
+          "sin-present": "La persona que ha comprado {present}, {sin}",
+          "sin-friend": "{friend} es la persona que {sin}",
+          "sin-note": "La persona con un silbato que suena en {note} {sin}"
+        },
+        "negative": {
+          "sin-color": "El regalo envuelto en {color} no fue comprado por el que {sin}",
+          "sin-day": "La persona que {sin} no compró el regalo el {day}",
+          "sin-tattoo": "La persona que tiene un tatuaje de {tattoo} no {sin}",
+          "sin-present": "La persona que ha comprado {present} no {sin}",
+          "sin-friend": "{friend} no es la persona que {sin}",
+          "sin-note": "La persona con un silbato que suena en {note} no {sin}"
+        }
+      },
+      "note": {
+        "positive": {
+          "note-sin": "La persona con un silbato que suena en {note} {sin}",
+          "note-tattoo": "La persona que tiene un tatuaje de {tattoo} tiene un silbato que suena en {note}",
+          "note-present": "La persona con un silbato que suena en {note} compró {present}",
+          "note-friend": "El silbato de {friend} suena en {note}",
+          "note-day": "La persona cuyo silbato suena en {note} compró su regalo el {day}",
+          "note-color": "El regalo envuelto en {color} fue comprado por el que tiene un silbato que suena en {note}"
+        },
+        "negative": {
+          "note-sin": "La persona con un silbato que suena en {note} no {sin}",
+          "note-tattoo": "La persona que tiene un tatuaje de {tattoo} no tiene un silbato que suena en {note}",
+          "note-present": "La persona con un silbato que suena en {note} no compró {present}",
+          "note-friend": "El silbato de {friend} no suena en {note}",
+          "note-day": "La persona cuyo silbato suena en {note} no compró su regalo el {day}",
+          "note-color": "El regalo envuelto en {color} no fue comprado por el que tiene un silbato que suena en {note}"
+        }
+      }
+    }
+  }
+}
