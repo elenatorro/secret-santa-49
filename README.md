@@ -1,6 +1,6 @@
 # Secret Santa 49
 
-Mobile and board game. Available in English and Spanish. Download it as a PWA at https://secret-santa-49.netlify.com/
+Mobile and board game. Available in English and Spanish. Download it as a PWA at https://secret-santa-49.netlify.app
 
 ## Instructions
 
