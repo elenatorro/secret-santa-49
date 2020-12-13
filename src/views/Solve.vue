@@ -31,14 +31,16 @@ import { EFriend, friends } from '@/types/categories/friend'
   }
 })
 export default class SolveView extends Vue {
-  protected friends = friends
-
   get selectedFriend () {
     return this.$store.getters['selectedFriend']
   }
 
+  get boardFriends () {
+    return this.$store.getters['boardFriends'] as Array<String>
+  }
+
   get friendList () {
-    return this.friends.filter((f) => f !== this.selectedFriend)
+    return this.boardFriends.filter((f: String) => f !== this.selectedFriend)
   }
 
   protected onFriendClicked (friend: EFriend) {

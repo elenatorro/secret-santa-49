@@ -29,6 +29,71 @@
       "tattoos": "Tattoos",
       "tattoos-list": "One, two, three, four, five, six, and seven lines"
     },
+    "info": {
+      "sin": {
+        "lust": "lust",
+        "gluttony": "gluttony",
+        "greed": "greed",
+        "sloth": "sloth",
+        "wrath": "wrath",
+        "envy": "envy",
+        "pride": "pride"
+      },
+      "color": {
+        "red": "red",
+        "orange": "orange",
+        "yellow": "yellow",
+        "green": "green",
+        "blue": "blue",
+        "indigo": "indigo",
+        "violet": "violet"
+      },
+      "day": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "friend": {
+        "Alice": "Alice",
+        "Bob": "Bob",
+        "Charlie": "Charlie",
+        "Daniel": "Daniel",
+        "Eve": "Eve",
+        "Fabiana": "Fabiana",
+        "Gloria": "Gloria"
+      },
+      "tattoo": {
+        "one": "one line",
+        "two": "two lines",
+        "three": "three lines",
+        "four": "four lines",
+        "five": "five lines",
+        "six": "six lines",
+        "seven": "seven lines"
+      },
+      "note": {
+        "C": "C",
+        "D": "D",
+        "E": "E",
+        "F": "F",
+        "G": "G",
+        "A": "A",
+        "B": "B"
+      },
+      "present": {
+        "board-game": "a board game",
+        "smart-watch": "a SmartWatch",
+        "socks": "a pair of socks",
+        "videogame": "a videogame",
+        "book": "a book",
+        "vr-glasses": "a pair of VR glasses",
+        "perfume": "a perfume"
+      }
+    },
     "game-over": {
       "error-header": "Oh, no!",
       "error-message": "Sorry, {friend}, but your Secret Santa is {secretSanta}",
@@ -37,6 +102,9 @@
     },
     "start-button": {
       "start": "Start"
+    },
+    "play-button": {
+      "play": "Play"
     },
     "back-button": {
       "back": "Back"
@@ -52,6 +120,9 @@
       "present": "You just got",
       "subtitle": "Now, you've to find out who's your Secret Santa!",
       "question": "Who are you?"
+    },
+    "level-selector": {
+      "friends-number": "Friends number"
     },
     "question-button": {
       "hint": "Hint",

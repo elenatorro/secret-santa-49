@@ -11,7 +11,7 @@
         :key="friend">
         <td>{{ friend }}</td>
         <td v-for="category in categories" :key="category">
-          {{ $t(`questions.placeholders.${category}.${friendCategory(friend, category)}`) }}
+          <span>{{ $t(`components.info.${category}.${friendCategory(friend, category)}`) }}</span>
         </td>
       </tr>
     </tbody>
@@ -21,16 +21,21 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { categories } from '@/constants/categories'
-import { EFriend, friends } from '@/types/categories/friend'
+import { EFriend } from '@/types/categories/friend'
 
 @Component
 export default class GameBoard extends Vue {
-  protected friends: Array<EFriend> = friends
-  protected categories: Array<string> = categories
-
   get headers () {
     return ['receiver', ...this.categories]
+  }
+
+  get categories () {
+    const categories = this.$store.getters['categories']
+    return Object.keys(categories[0])
+  }
+
+  get friends () {
+    return this.$store.getters['boardFriends']
   }
 
   protected friendCategory (friend: string, category: string) {
