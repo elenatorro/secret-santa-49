@@ -233,7 +233,7 @@
           "color-day": "The {color} gift was bought on {day}",
           "color-note": "The {color} gift was bought by the one whose whistle sounds like {note}",
           "color-tattoo": "The {color} gift was bought by the one with the {tattoo} tattoo",
-          "color-present": "The {color} gift contains the {present}",
+          "color-present": "The {color} gift contains {present}",
           "color-sin": "The {color} gift was bought by the one who {sin}",
           "color-friend": "{friend} bought the gift wrapped in {color}"
         },
@@ -302,7 +302,7 @@
       },
       "present": {
         "positive": {
-          "present-color": "The {color} gift contains the {present}",
+          "present-color": "The {color} gift contains {present}",
           "present-tattoo": "The one with a {tattoo} tattoo bought {present}",
           "present-day": "The one who bought {present} did it on {day}", 
           "present-sin": "The one who bought {present} {sin}",
