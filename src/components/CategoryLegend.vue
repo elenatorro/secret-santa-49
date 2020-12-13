@@ -10,7 +10,11 @@
     <div class="CategoryLegendModal" v-show="showLegend">
       <dl v-for="category in categories" :key="category">
         <dt>{{ $t(`components.category-legend.${category}s`) }}:</dt>
-        <dd>{{ $t(`components.category-legend.${category}s-list`) }}</dd>
+        <dd>
+          <span v-for="boardCategory in boardCategories[category].sort(() => Math.random() - 0.5)" :key="boardCategory">
+            {{ $t(`components.info.${category}.${boardCategory}`)}},
+          </span>
+        </dd>
       </dl>
     </div>
   </section>
@@ -24,10 +28,17 @@ import { categories } from '@/constants/categories'
 @Component({})
 export default class CategoryLegend extends Vue {
   protected showLegend: boolean = false
-  protected categories: Array<string> = categories
 
   protected toggleLegend () {
     this.showLegend = !this.showLegend
+  }
+
+  get categories () {
+    return Object.keys(this.boardCategories)
+  }
+
+  get boardCategories () {
+    return this.$store.getters['boardCategories']
   }
 }
 </script>

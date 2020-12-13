@@ -1,15 +1,16 @@
 import { ECategories } from '@/types/categories/categories'
 import { QUESTION_TYPES, EQuestion, IQuestionPlaceholder } from '@/types/questions'
-import { EFriend, friends } from '@/types/categories/friend'
+import { EFriend } from '@/types/categories/friend'
 
 import i18n from '@/i18n'
 import { IBoard } from '@/types/game/board'
-import { categories } from '@/constants/categories'
 
 export function buildQuestion (board: IBoard) {
-  const friend = getFriend()
-  const questionCategoryA = getCategoryA()
-  const questionCategoryB = getCategoryB(questionCategoryA)
+  const boardFriends = [...board.keys()] as Array<EFriend>
+  const boardCategories = Object.keys(board.values().next().value) as Array<ECategories>
+  const friend = getFriend(boardFriends)
+  const questionCategoryA = getCategoryA(boardCategories)
+  const questionCategoryB = getCategoryB(questionCategoryA, boardCategories)
   const questionType = getRandomType() as EQuestion
 
   return buildQuestionsByType[questionType](
@@ -25,24 +26,24 @@ const buildQuestionsByType = {
   negative: buildNegativeQuestion
 }
 
-function getFriend () {
-  return getRandomFriend(friends)
+function getFriend (boardFriends: Array<EFriend>) {
+  return getRandomFriend(boardFriends)
 }
 
-function getCategoryA () {
-  return getRandomCategory(categories)
+function getCategoryA (boardCategories: Array<ECategories>) {
+  return getRandomCategory(boardCategories)
 }
 
-function getCategoryB (questionCategoryA: ECategories) {
+function getCategoryB (questionCategoryA: ECategories, boardCategories: Array<ECategories>) {
   if (questionCategoryA === ECategories.Friend) {
-    return getRandomCategory(categories.filter(c => c !== questionCategoryA && c !== ECategories.Present))
+    return getRandomCategory(boardCategories.filter(c => c !== questionCategoryA && c !== ECategories.Present))
   }
 
   if (questionCategoryA === ECategories.Present) {
-    return getRandomCategory(categories.filter(c => c !== questionCategoryA && c !== ECategories.Friend))
+    return getRandomCategory(boardCategories.filter(c => c !== questionCategoryA && c !== ECategories.Friend))
   }
 
-  return getRandomCategory(categories.filter(c => c !== questionCategoryA))
+  return getRandomCategory(boardCategories.filter(c => c !== questionCategoryA))
 }
 
 function buildPositiveQuestion (friend: EFriend, board: IBoard, categoryA: ECategories, categoryB: ECategories) {
@@ -68,7 +69,8 @@ function buildPositiveQuestion (friend: EFriend, board: IBoard, categoryA: ECate
 }
 
 function buildNegativeQuestion (friend: EFriend, board: IBoard, categoryA: ECategories, categoryB: ECategories) {
-  const friend2 = getRandomFriend(friends.filter(f => f !== friend))
+  const boardFriends = [...board.keys()] as Array<EFriend>
+  const friend2 = getRandomFriend(boardFriends.filter(f => f !== friend))
   const board1Row = board.get(friend)
   const board2Row = board.get(friend2)
   const valueA = board1Row ? board1Row[categoryA] : null
@@ -92,7 +94,7 @@ function buildNegativeQuestion (friend: EFriend, board: IBoard, categoryA: ECate
   }
 }
 
-function getRandomFriend (friends: Array<EFriend>) {
+export function getRandomFriend (friends: Array<EFriend>) {
   return _random(friends)
 }
 

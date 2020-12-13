@@ -20,4 +20,3 @@ export interface IQuestion {
 }
 
 export const QUESTION_TYPES = ['positive', 'negative'] as Array<EQuestion>
-export const MAX_QUESTIONS = (7 * 6 * 5) / 2

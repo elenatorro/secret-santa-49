@@ -15,6 +15,17 @@
       <h3>{{ $t(`components.friend-selector.question`) }}</h3>
 
       <FriendList :friends="friends" @friendClicked="onFriendClicked"/>
+
+      <h3>{{ $t(`components.level-selector.friends-number`) }}</h3>
+
+      <LevelOptions @levelClicked="onLevelClicked" />
+
+      <button
+        class="ss_Button ss_PrimaryButton"
+        @click="onStartClicked">
+        {{ $t(`components.play-button.play`) }}
+      </button>
+
       <BackButton class="ss_Button ss_PrimaryButton" />
     </section>
   </section>
@@ -26,16 +37,20 @@ import { EFriend, friends } from '@/types/categories/friend'
 import CategoryMedia from '@/components/media/CategoryMedia.vue'
 import FriendList from '@/components/FriendList.vue'
 import BackButton from '@/components/BackButton.vue'
+import LevelOptions from '@/components/LevelOptions.vue'
 
 @Component({
   components: {
     FriendList,
+    LevelOptions,
     CategoryMedia,
     BackButton
   }
 })
 export default class FriendSelector extends Vue {
   protected friends: Array<EFriend> = friends
+  protected friend: EFriend = EFriend.Alice
+  protected level: Number = 7
 
   get selectedFriend () {
     return this.$store.getters['selectedFriend']
@@ -46,7 +61,18 @@ export default class FriendSelector extends Vue {
   }
 
   protected onFriendClicked (friend: EFriend) {
-    this.$store.dispatch('init', friend)
+    this.friend = friend
+  }
+
+  protected onLevelClicked (level: Number) {
+    this.level = level
+  }
+
+  protected onStartClicked () {
+    this.$store.dispatch('init', {
+      selectedFriend: this.friend,
+      selectedLevel: this.level
+    })
   }
 }
 </script>
@@ -88,5 +114,9 @@ export default class FriendSelector extends Vue {
   button {
     margin: 0.5em;
   }
+}
+
+.ss_Button {
+  margin: .5em 0;
 }
 </style>

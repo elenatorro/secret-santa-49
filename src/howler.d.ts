@@ -1,4 +1,4 @@
-declare module 'howler' {
-  import { Howl } from 'howler';
+declare module 'TSHowler' {
+  import { Howl } from 'howler'
   export default Howl
 }
