@@ -16,3 +16,8 @@ export default class LanguageSelector extends Vue {
   }
 }
 </script>
+<style scoped>
+.LanguageSelector {
+  margin: 1em 0;
+}
+</style>

@@ -11,7 +11,7 @@
 
     <LanguageSelector />
 
-    <p>by Elena Torró</p>
+    <p>💖 by <a href="https://elenatorro.com">Elena Torró</a> 💖</p>
   </div>
 </template>
 
