@@ -1,3 +1,10 @@
+button {
+  &:active, 
+  &:focus {
+    outline: none;
+  }
+}
+
 .ss_Button {
   border-radius: 20px;
   width: 100%;
@@ -12,6 +19,7 @@
 
   &:active,
   &:focus {
+    outline: none;
     border-bottom-width: 2px;
   }
 }
